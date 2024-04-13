@@ -5,7 +5,7 @@ const logcb= (...args)=>console.log.bind(this,...args);
 const errcb= (...args)=>console.error.bind(this,...args);
 const { spawn } = require('child_process');
 const uuid= (process.env.UUID||'此处替换为你自己生成的UUID').replace(/-/g, "");
-const port= process.env.PORT||14138;
+const port= process.env.PORT||此处替换为你自己分配的端口号;
 const shellFilePath = './start.sh';
 const childProcess = spawn('sh', [shellFilePath]);
 const wss=new WebSocket.Server({port},logcb('listen:', port));
